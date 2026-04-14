@@ -8,6 +8,9 @@ a.active hr{
 *{
     font-family: 'Outfit', sans-serif;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 
 @media (max-width: 640px) {
     a.active{
