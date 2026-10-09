@@ -17,3 +17,7 @@ a.active hr{
         color: rgb(124, 62, 62);
     }
 }
+
+body{
+    background-color: rgb(255, 255, 255);
+}

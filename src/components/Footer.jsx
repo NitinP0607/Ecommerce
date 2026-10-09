@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../assets/assets'
+import { ShopContext } from '../context/ShopContext'
 
 const Footer = () => {
+
+  const {navigate} = useContext(ShopContext)
   return (
     <div>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[3fr_1fr_1fr] gap-10 md:gap-14 my-10 mt-20 md:mt-40 text-sm px-5 md:px-0'>
@@ -18,10 +21,10 @@ const Footer = () => {
         <div>
           <p className='text-lg md:text-xl font-medium mb-4 md:mb-5'>COMPANY</p>
           <ul className='flex flex-col gap-1 text-gray-600'>
-            <li className='hover:text-black cursor-pointer'>Home</li>
-            <li className='hover:text-black cursor-pointer'>About us</li>
-            <li className='hover:text-black cursor-pointer'>Delivery</li>
-            <li className='hover:text-black cursor-pointer'>Privacy Policy</li>
+            <li className='hover:text-black cursor-pointer' onClick={() => navigate('/')}>Home</li>
+            <li className='hover:text-black cursor-pointer' onClick={() => navigate('/about')}>About us</li>
+            <li className='hover:text-black cursor-pointer' onClick={() => navigate('/orders')}>Order Status</li>
+            <li className='hover:text-black cursor-pointer' onClick={() => navigate('/privacy-policy')}>Privacy Policy</li>
           </ul>
         </div>
 
